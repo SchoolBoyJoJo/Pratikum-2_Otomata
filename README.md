@@ -6,7 +6,7 @@
 
 ## Deskripsi Tugas
 Program ini dirancang untuk menentukan apakah suatu *string* merupakan anggota dari himpunan bahasa:
-[cite_start]**$L = \{ x \in (0 + 1)^+ \mid \text{karakter terakhir pada string } x \text{ adalah 1 dan } x \text{ tidak memiliki substring 00} \}$**[cite: 134, 135].
+**$L = \{ x \in (0 + 1)^+ \mid \text{karakter terakhir pada string } x \text{ adalah 1 dan } x \text{ tidak memiliki substring 00} \}$**.
 
 ## Logika Algoritma (FSM)
 Implementasi kode ini didasarkan pada *Finite State Diagram* dengan 4 state utama:
@@ -25,7 +25,7 @@ Implementasi kode ini didasarkan pada *Finite State Diagram* dengan 4 state utam
 - **Dari C**: Input `0` atau `1` → Tetap di C.
 
 ## Fitur Program
-[cite_start]Program dibuat menggunakan **HTML, CSS, dan JavaScript** untuk menampilkan UI/UX yang lebih menarik dan fresh:
+Program dibuat menggunakan **HTML, CSS, dan JavaScript** untuk menampilkan UI/UX yang lebih menarik dan fresh:
 
 1. **Validasi Input Real-time**: Program secara otomatis mendeteksi dan memberi peringatan jika pengguna memasukkan karakter selain `0` dan `1`.
 2. **Visualisasi Path Trace**: Menampilkan urutan perpindahan *state* secara detail langkah demi langkah (misal: `S → A → B`) sehingga memudahkan proses verifikasi algoritma.
