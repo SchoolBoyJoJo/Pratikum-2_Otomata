@@ -123,7 +123,7 @@
 </div>
 
 <script>
-    // Validasi input agar hanya bisa diisi 0 dan 1
+    // validasi input 0 dan 1
     function validateInput() {
         const inputStr = document.getElementById('inputString').value;
         const errorMsg = document.getElementById('errorMsg');
@@ -140,7 +140,6 @@
         }
     }
 
-    // Fungsi utama otomasi FSM
     function checkFSM() {
         const inputStr = document.getElementById('inputString').value;
         const resultBox = document.getElementById('resultBox');
@@ -155,7 +154,6 @@
         let currentState = 'S';
         let path = ['S'];
 
-        // Looping pembacaan setiap karakter
         for (let i = 0; i < inputStr.length; i++) {
             let char = inputStr[i];
 
@@ -172,16 +170,14 @@
                 else if (char === '1') currentState = 'B';
             } 
             else if (currentState === 'C') {
-                currentState = 'C'; // Trap state, stuck disini
+                currentState = 'C';
             }
 
             path.push(currentState);
         }
 
-        // FSM diterima jika berhenti di state B
         const isAccepted = (currentState === 'B');
 
-        // Menampilkan UI Hasil
         resultBox.style.display = 'block';
         if (isAccepted) {
             resultBox.className = 'result-box accepted';
@@ -191,7 +187,6 @@
             resultStatus.innerText = "❌ String DITOLAK (Rejected)";
         }
 
-        // Format visualisasi jalur transisi
         pathOutput.innerHTML = path.map((state, index) => {
             if (index === 0) return `<span class="state-node">${state}</span>`;
             return ` &rarr; <span>(input ${inputStr[index-1]})</span> &rarr; <span class="state-node">${state}</span>`;
